@@ -1,0 +1,43 @@
+﻿@model EcommerceOfficial.ResponseModel.GetAllCategoriesResponseModel;
+<style>
+    a:hover{
+        font-size: 120%;
+    }
+</style>
+
+@if (@Model.Categories.Count!= 0)
+{
+    <h1>List of Product</h1>
+
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Name</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{int count =0;}
+            @foreach (var item in Model.Categories)
+            {
+                count ++;
+                <tr>
+                <td>@count</td>
+                <td>@item.Name</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id"> Delete </a>
+                </td>
+                </tr> 
+                
+                
+            }
+        
+        </tbody>
+        
+    </table>
+}
+else
+{
+    <h1>There is no category presently.</h1>
+}

@@ -1,0 +1,13 @@
+﻿@model EcommerceOfficial.RequestModel.LoginRequestModel;
+<p style="color: red; font-weight: bold;">Add aadmin</p>
+<form method="Post">
+    <div class="col-md-6" style="margin-top:40px; font-size: larger; font -weight: bold;colour: darkcyan">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" type="text" class="form-control">
+    </div>
+    <div class="col-md-6" style="margin-top:40px; font-size: larger; font -weight: bold;colour: darkcyan">
+        <label asp-for="Password" class="form-label">Password</label>
+        <input asp-for="Password" type="password" class="form-control">
+    </div>
+    <button type="submit">Create</button>
+</form>
